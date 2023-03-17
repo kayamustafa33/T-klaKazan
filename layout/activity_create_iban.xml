@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".profile_activities.CreateIbanActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:elevation="20dp"
+        android:background="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/createIbanBackBtn"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="@string/create_iban"
+            app:titleTextColor="@color/white"
+            app:navigationIcon="@drawable/ic_baseline_arrow_back_24"/>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_marginTop="150dp"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:text="@string/create_iban"
+        android:textAlignment="center"/>
+
+    <EditText
+        android:id="@+id/createIbanNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/black"
+        android:textColorHint="@android:color/darker_gray"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="15dp"
+        android:drawableStart="@drawable/ic_baseline_pen"
+        android:drawablePadding="8dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_text_bg"
+        android:hint="@string/iban_name"
+        android:inputType="text"
+        android:paddingStart="12dp"/>
+
+    <EditText
+        android:id="@+id/createFullNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/black"
+        android:textColorHint="@android:color/darker_gray"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/edit_text_bg"
+        android:hint="@string/full_name"
+        android:drawableStart="@drawable/ic_baseline_person_24"
+        android:drawablePadding="8dp"
+        android:paddingStart="12dp"/>
+
+
+    <EditText
+        android:id="@+id/createIbanAddressEditText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/edit_text_bg"
+        android:hint="@string/iban_address"
+        android:textColor="@color/black"
+        android:inputType="number"
+        android:text="TR"
+        android:maxLength="26"
+        android:drawableStart="@drawable/ic_baseline_account_balance"
+        android:drawablePadding="8dp"
+        android:paddingStart="12dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/createIbanBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="70dp"
+        android:background="@drawable/edit_text_bg"
+        android:backgroundTint="@color/green"
+        android:text="@string/create"
+        android:onClick="createIbanClicked"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginBottom="10dp"/>
+
+</LinearLayout>
